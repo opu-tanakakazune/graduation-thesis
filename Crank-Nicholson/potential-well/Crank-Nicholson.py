@@ -13,7 +13,7 @@ expected_p = 100.0
 h = 0.01
 h2 = 0.0000001
 n = 400
-constant_v = 8000
+constant_v = -8000
 alpha = h2/(2*h*h)
 beta = h2/2
 for i in range(n-1):
@@ -32,7 +32,7 @@ for i in range(n):
     v += [v_value]
 calculate_s = 0
 #  t=0のdataファイル作成
-with open('Crank-Nicholson/schrodinger1.dat', 'w') as f1:
+with open('Crank-Nicholson/potential-well/schrodinger1.dat', 'w') as f1:
     for i in range(n):
         x = -2.0 + h*i
         expected_value = (abs(old_phi[i]))**2
@@ -64,7 +64,7 @@ def calculate_d(alpha, beta, v, phi1, phi2, phi3):
     return d
 
 for m in range(2,8):
-    file_name = 'Crank-Nicholson/schrodinger' + str(m) + '.dat'
+    file_name = 'Crank-Nicholson/potential-well/schrodinger' + str(m) + '.dat'
     f_number = 'f' + str(m)
     for i in range(20000):
         phi =[]
@@ -95,7 +95,7 @@ for m in range(2,8):
             print(x, expected_value, v[i]/4000, file=f_number)
     s += [calculate_s]
 
-with open('Crank-Nicholson/schrodingerS.dat', 'w') as f8:
+with open('Crank-Nicholson/potential-well/schrodingerS.dat', 'w') as f8:
     print(0, s[0], file=f8)
     print(1, s[1], file=f8)
     print(2, s[2], file=f8)
