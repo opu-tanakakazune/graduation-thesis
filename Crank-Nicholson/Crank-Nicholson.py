@@ -29,6 +29,7 @@ for i in range(n):
     if x<0.5 and x>0:
         v_value = constant_v
     old_phi += [phi_value]
+    print(phi_value)
     v += [v_value]
 calculate_s = 0
 #  t=0のdataファイル作成

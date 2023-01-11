@@ -8,8 +8,8 @@ s = []
 alphas = []
 
 dx = 0.05
-expected_x = -0.5
-expected_p = 100.0
+expected_x = 0
+expected_p = 0
 h = 0.01
 h2 = 0.0000001
 n = 400
@@ -30,6 +30,7 @@ for i in range(n):
         v_value = constant_v
     old_phi += [phi_value]
     v += [v_value]
+    print(phi_value)
 calculate_s = 0
 #  t=0のdataファイル作成
 with open('Crank-Nicholson/potential-well/schrodinger1.dat', 'w') as f1:
