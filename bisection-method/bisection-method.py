@@ -1,9 +1,9 @@
 import math
 
-v = 0.8
+v = math.pi * math.pi
 l = 1
-x1 = -1
-x2 = 1
+x1 = 0
+x2 = 2
 
 #f(x)を計算・定義する関数
 def calculateF(x, v, l):

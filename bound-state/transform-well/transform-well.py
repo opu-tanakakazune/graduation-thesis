@@ -20,17 +20,7 @@ for i in range(n-1):
 
 # 初期値の設定
 for i in range(n):
-    x = -5.0 + h*i
-    # a = -(x-0)*(x-0)/4.0/0.05/0.05
-    # b = (0 * x)
-    # phi_value = ((2.0*cmath.pi*0.05*0.05)**(-0.25) * cmath.exp(a+b*1j))
-    # v_value = 0
-    # if x<0.5 and x>0:
-    #     v_value = constant_v
-    # old_phi += [phi_value]
-    # v += [v_value]
-    # print(phi_value)
-    
+    x = -5.0 + h*i    
     k = xay / l
     ka = eta / l
     C = 1/((l + (1/ka))**(1/2))
@@ -81,7 +71,7 @@ def calculate_d(alpha, beta, v, phi1, phi2, phi3):
     d = -alpha*phi3 +(1j +2*alpha +beta*v)*phi2 -alpha*phi1
     return d
 
-for m in range(2,3):
+for m in range(2,5):
     file_name = 'bound-state/transform-well/schrodinger' + str(m) + '.dat'
     f_number = 'f' + str(m)
     for i in range(20000):
